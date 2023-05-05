@@ -1,27 +1,28 @@
-#container {
+.imagen {
+  display: flex;
+  justify-content: center;
+  height: 40vh;
+}
+
+#container-texto {
+  font-family: Cabin;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0em;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  height: 84px;
+  left: 43px;
+  top: 499px;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+#container-boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+#iniciar{
+  display: flex;
+  justify-content: center;
 }
