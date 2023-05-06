@@ -11,7 +11,11 @@ export class RegistroPage implements OnInit {
   
   navToHome(){
     this.nav.navigateForward('/home')
-  }
+  };
+
+  navToContra(){
+    this.nav.navigateForward('/registro-contra')
+  };
   
   ngOnInit() {
   }
