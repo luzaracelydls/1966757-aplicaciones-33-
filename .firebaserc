@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ionic-pia-1966757": {
+      "hosting": {
+        "app": [
+          "ionic-pia-1966757"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ionic-pia-1966757"
+  }
+}
