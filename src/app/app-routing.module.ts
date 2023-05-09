@@ -26,6 +26,14 @@ const routes: Routes = [
     path: 'inicio-contra',
     loadChildren: () => import('./inicio-contra/inicio-contra.module').then( m => m.InicioContraPageModule)
   },
+  {
+    path: 'seleccion-nombre',
+    loadChildren: () => import('./seleccion-nombre/seleccion-nombre.module').then( m => m.SeleccionNombrePageModule)
+  },
+  {
+    path: 'terminos',
+    loadChildren: () => import('./terminos/terminos.module').then( m => m.TerminosPageModule)
+  },
 
 ];
 

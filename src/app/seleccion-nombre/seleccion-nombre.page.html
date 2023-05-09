@@ -1,0 +1,32 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">seleccion-nombre</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-button class="flecha" (click)="navToHome()">
+    <ion-icon slot="icon-only" name="arrow-back-circle-outline"></ion-icon>
+  </ion-button>
+
+  <div class="nombre">
+    <p> ¿Como te llamas?</p>
+    <ion-input  fill="outline"></ion-input>
+  </div>
+
+  <div>
+    <p>____________________________________________</p>
+  </div>
+
+  <div class = "aviso">
+    <p>Acepta los terminos y condiciones por favor</p>
+    <ion-button fill="clear" color = "warning" (click)="navToTerminos()">Terminos y condiciones </ion-button>
+    <ion-checkbox labelPlacement="start">Acepto los terminos y condiciones</ion-checkbox>
+  </div>
+
+
+  <div class="crear">
+    <ion-button shape="round" color = "warning">Crea tu cuenta</ion-button>
+  </div>
+
+</ion-content>

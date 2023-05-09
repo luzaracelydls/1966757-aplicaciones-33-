@@ -14,6 +14,10 @@ export class RegistroContraPage implements OnInit {
     this.nav.navigateForward('/registro')
   }
 
+  navToNombre(){
+    this.nav.navigateForward('/seleccion-nombre')
+  }
+
   ngOnInit() {
   }
 
