@@ -13,6 +13,9 @@ export class InicioPage implements OnInit {
     this.nav.navigateForward('/home')
   }
 
+  navToInicioContra(){
+    this.nav.navigateForward('/inicio-contra')
+  };
 
   ngOnInit() {
   }
