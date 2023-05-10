@@ -18,7 +18,8 @@ const routes: Routes = [
   {
     path: 'inicio',
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
-  },  {
+  },
+  {
     path: 'registro-contra',
     loadChildren: () => import('./registro-contra/registro-contra.module').then( m => m.RegistroContraPageModule)
   },
@@ -33,7 +34,11 @@ const routes: Routes = [
   {
     path: 'terminos',
     loadChildren: () => import('./terminos/terminos.module').then( m => m.TerminosPageModule)
+  },  {
+    path: 'artistas',
+    loadChildren: () => import('./artistas/artistas.module').then( m => m.ArtistasPageModule)
   },
+
 
 ];
 

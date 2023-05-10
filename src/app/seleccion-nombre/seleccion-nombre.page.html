@@ -5,7 +5,7 @@
     </ion-toolbar>
   </ion-header>
   
-  <ion-button class="flecha" (click)="navToHome()">
+  <ion-button class="flecha" (click)="navToRegistroContra()">
     <ion-icon slot="icon-only" name="arrow-back-circle-outline"></ion-icon>
   </ion-button>
 
@@ -21,12 +21,12 @@
   <div class = "aviso">
     <p>Acepta los terminos y condiciones por favor</p>
     <ion-button fill="clear" color = "warning" (click)="navToTerminos()">Terminos y condiciones </ion-button>
-    <ion-checkbox labelPlacement="start">Acepto los terminos y condiciones</ion-checkbox>
+    <ion-checkbox (ionChange)="toggleButton($event)" labelPlacement="start">Acepto los terminos y condiciones</ion-checkbox>
   </div>
 
 
   <div class="crear">
-    <ion-button shape="round" color = "warning">Crea tu cuenta</ion-button>
+    <ion-button [disabled]="!isButtonEnabled" (click)="navToArtistas()"shape="round" color = "warning">Crea tu cuenta</ion-button>
   </div>
 
 </ion-content>

@@ -8,14 +8,24 @@ import { NavController } from '@ionic/angular';
 })
 export class SeleccionNombrePage implements OnInit {
 
+  isButtonEnabled = false;
+
   constructor(private nav:NavController) { }
 
-  navToHome(){
+  toggleButton(event:any){
+    this.isButtonEnabled=event.detail.checked;
+  }
+
+  navToRegistroContra(){
     this.nav.navigateForward('/registro-contra')
   }
 
   navToTerminos(){
     this.nav.navigateForward('/terminos')
+  }
+
+  navToArtistas() {
+    this.nav.navigateForward('/artistas');
   }
   ngOnInit() {
   }
