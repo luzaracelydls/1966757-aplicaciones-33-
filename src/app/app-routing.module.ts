@@ -19,14 +19,7 @@ const routes: Routes = [
     path: 'inicio',
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
   },
-  {
-    path: 'registro-contra',
-    loadChildren: () => import('./registro-contra/registro-contra.module').then( m => m.RegistroContraPageModule)
-  },
-  {
-    path: 'inicio-contra',
-    loadChildren: () => import('./inicio-contra/inicio-contra.module').then( m => m.InicioContraPageModule)
-  },
+  
   {
     path: 'seleccion-nombre',
     loadChildren: () => import('./seleccion-nombre/seleccion-nombre.module').then( m => m.SeleccionNombrePageModule)
@@ -34,7 +27,8 @@ const routes: Routes = [
   {
     path: 'terminos',
     loadChildren: () => import('./terminos/terminos.module').then( m => m.TerminosPageModule)
-  },  {
+  },
+  {
     path: 'artistas',
     loadChildren: () => import('./artistas/artistas.module').then( m => m.ArtistasPageModule)
   },

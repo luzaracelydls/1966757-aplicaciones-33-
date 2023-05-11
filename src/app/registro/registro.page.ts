@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { FormControl, FormGroup } from '@angular/forms';
 import { UserService } from '../services/user.service';
-import { UserDataServiceService } from '../services/user-data-service.service';
+import { AuthService } from '../services/auth.service';
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.page.html',
@@ -10,24 +10,21 @@ import { UserDataServiceService } from '../services/user-data-service.service';
 })
 export class RegistroPage implements OnInit {
 
-  formReg : FormGroup;
 
-  constructor(private nav:NavController,private userDataService: UserDataServiceService) { 
-    this.formReg = new FormGroup({
-      email : new FormControl()
-    })
+
+  constructor(private nav:NavController,private auth:AuthService){
+  }
+
+  credenciales = {
+    email:null,
+    password:null
   }
   
   navToHome(){
     this.nav.navigateForward('/home')
   };
 
-  navToContra(){
-    this.userDataService.email = this.formReg.value.email;
-    this.nav.navigateForward('/registro-contra')
-  };
   
-
 
   ngOnInit() {
   }
