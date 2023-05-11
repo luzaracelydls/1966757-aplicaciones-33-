@@ -15,15 +15,14 @@ export class RegistroPage implements OnInit {
   constructor(private nav:NavController,private auth:AuthService){
   }
 
-  credenciales = {
-    email:null,
-    password:null
-  }
-  
+ 
   navToHome(){
     this.nav.navigateForward('/home')
   };
-
+  
+  navToSeleccionNombre(){
+    this.nav.navigateForward('/seleccion-nombre')
+  }
   
 
   ngOnInit() {

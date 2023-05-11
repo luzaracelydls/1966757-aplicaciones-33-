@@ -44,5 +44,8 @@ export class InicioPage implements OnInit {
     this.nav.navigateForward('/home')
   }
 
+  navToseleccionNombre(){
+    this.nav.navigateForward('/seleccion-nombre')
+  }
 
 }

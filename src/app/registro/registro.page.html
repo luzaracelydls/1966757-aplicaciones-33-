@@ -12,16 +12,16 @@
 
   <div class="correo">
     <p> ¿Cuál es tu correo?</p>
-    <ion-input [(ngModel)]="credenciales.email" fill="outline"></ion-input>
+    <ion-input fill="outline"></ion-input>
   </div>
 
   <div class="contra">
     <p> Crea una contraseña</p>
-    <ion-input [(ngModel)]="credenciales.password" fill="outline"></ion-input>
+    <ion-input  fill="outline"></ion-input>
   </div>
 
   <div class="siguiente">
-    <ion-button shape="round" color = "warning"  >siguiente</ion-button>
+    <ion-button shape="round" color = "warning" (click)="navToSeleccionNombre()">siguiente</ion-button>
   </div>
 
 </ion-content>

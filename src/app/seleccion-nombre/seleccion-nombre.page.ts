@@ -16,8 +16,8 @@ export class SeleccionNombrePage implements OnInit {
     this.isButtonEnabled=event.detail.checked;
   }
 
-  navToRegistroContra(){
-    this.nav.navigateForward('/registro-contra')
+  navToRegistro(){
+    this.nav.navigateForward('/registro')
   }
 
   navToTerminos(){
