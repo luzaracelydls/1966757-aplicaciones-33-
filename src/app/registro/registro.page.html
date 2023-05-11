@@ -10,8 +10,9 @@
     <ion-icon slot="icon-only" name="arrow-back-circle-outline"></ion-icon>
   </ion-button>
 
-  <form class="correo"[formGroup]="registroForm" (ngSubmit)="register()">
-    <ion-item>
+  <form [formGroup]="registroForm" (ngSubmit)="register()">
+
+    <ion-item class = "correo">
       <ion-label position="floating">¿Cual es tu correo?</ion-label>
       <ion-input type="email" formControlName="email"></ion-input>
     </ion-item>
@@ -19,11 +20,12 @@
     <ion-item class="contra"> 
       <ion-label position="floating">Crea tu contraseña</ion-label>
       <ion-input type="password" formControlName="password"></ion-input>
-
-   
     </ion-item >
-    <ion-button class="registrarse" type="submit" color = "warning" shape="round" [disabled]="!registroForm.valid">Registrarse</ion-button>
- 
-  </form>
+    
+    <div class ="registrarse">
+      <ion-button  type="submit" color = "warning" shape="round" [disabled]="!registroForm.valid">Registrarse</ion-button>
+    </div>
 
+  </form>
+  
 </ion-content>

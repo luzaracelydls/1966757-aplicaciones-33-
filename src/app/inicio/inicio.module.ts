@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { InicioPageRoutingModule } from './inicio-routing.module';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { InicioPage } from './inicio.page';
 
 @NgModule({
@@ -13,7 +13,8 @@ import { InicioPage } from './inicio.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    InicioPageRoutingModule
+    InicioPageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [InicioPage]
 })

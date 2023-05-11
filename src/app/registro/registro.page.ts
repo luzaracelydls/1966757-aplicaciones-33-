@@ -14,7 +14,7 @@ export class RegistroPage implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private navCtrl: NavController,
+    private nav: NavController,
     private authService: AuthService
   ) { 
     this.registroForm = new FormGroup({
@@ -37,7 +37,7 @@ export class RegistroPage implements OnInit {
     this.authService.register(email, password)
       .then(() => {
         // Si se registra correctamente, navegar a la siguiente página
-        this.navCtrl.navigateForward('/seleccion-nombre');
+        this.nav.navigateForward('/seleccion-nombre');
       })
       .catch((error) => {
         // Si ocurre un error al registrar, mostrarlo en la consola
@@ -46,7 +46,9 @@ export class RegistroPage implements OnInit {
   }
 
 
+
+
   navToHome(){
-    this.navCtrl.navigateForward('/home')
+    this.nav.navigateForward('/home')
   }
 }

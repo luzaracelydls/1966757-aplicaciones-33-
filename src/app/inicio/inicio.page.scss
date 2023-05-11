@@ -1,12 +1,31 @@
-.sesion{
+.correo{
     margin-top: 1vh;
     display: flex;
     flex-direction: column;
 }
-.sesion p {
+.correo p {
     height: 27px;
-    width: 60vw;
-    left: -5500px;
+    width: 190px;
+    left: -5593px;
+    top: -3445px;
+    border-radius: nullpx;
+    font-family: Cabin;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.contra{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.contra p {
+    height: 27px;
+    width: 190px;
+    left: -5593px;
     top: -3445px;
     border-radius: nullpx;
     font-family: Cabin;
@@ -17,36 +36,13 @@
     text-align: center;
 }
  
-
-
-.sesion-contra{
-    margin-top: 1vh;
-    display: flex;
-    flex-direction: column;
-}
-.sesion-contra p {
-    height: 27px;
-    width: 70vw;
-    left: -550px;
-    top: -3445px;
-    border-radius: nullpx;
-    font-family: Cabin;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: center;
-}
-
-
-
-
-
-.siguiente{
-    display: flex;
-    justify-content: center;
+.iniciar{
     margin-top: 70px;
+    justify-content: center;
+    display: flex;
 }
+
+
 
 .flecha{
     color:yellow;

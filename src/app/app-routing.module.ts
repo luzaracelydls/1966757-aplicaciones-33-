@@ -31,7 +31,11 @@ const routes: Routes = [
   {
     path: 'artistas',
     loadChildren: () => import('./artistas/artistas.module').then( m => m.ArtistasPageModule)
+  },  {
+    path: 'principal',
+    loadChildren: () => import('./principal/principal.module').then( m => m.PrincipalPageModule)
   },
+
 
 
 ];

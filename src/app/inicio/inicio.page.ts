@@ -1,7 +1,8 @@
 
 import { NavController } from '@ionic/angular';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-inicio',
@@ -10,42 +11,46 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 
 export class InicioPage implements OnInit {
-  @Output() formData: EventEmitter<{
-    email: string;
-    password: string;
-  }> = new EventEmitter();
+ 
+  loginForm : FormGroup;
+ 
 
-  form!: FormGroup;
-
-  constructor(private nav:NavController, private fb : FormBuilder) { }
+  constructor(private nav:NavController, 
+    private fb : FormBuilder,
+    private authService: AuthService) {
+      this.loginForm = new FormGroup({
+        email : new FormControl(),
+        password : new FormControl()
+      })
+     }
   
 
-  ngOnInit() :void {
-    this.form = this.fb.group({
-      email:['',[Validators.required,Validators.email]],
-      password:['',Validators.required],
-    });
-  } 
-  
-  get email() {
-    return this.form.get('email');
-  }
-
-  get password() {
-    return this.form.get('password');
-  }
-
-  onSubmit() {
-    this.formData.emit(this.form.value);
-  }
-
+     ngOnInit() {
+      this.loginForm = new FormGroup({
+        email: new FormControl('', Validators.email),
+        password: new FormControl('', Validators.required)
+      });
+    }
 
   navToHome(){
     this.nav.navigateForward('/home')
   }
 
-  navToseleccionNombre(){
-    this.nav.navigateForward('/seleccion-nombre')
+  login() {
+    const email = this.loginForm.value.email;
+    const password = this.loginForm.value.password;
+
+    this.authService.login(email, password)
+      .then(() => {
+        // Si se registra correctamente, navegar a la siguiente página
+        this.nav.navigateForward('/principal');
+      })
+      .catch((error) => {
+        // Si ocurre un error al registrar, mostrarlo en la consola
+        console.error(error);
+      });
   }
+
+  
 
 }
