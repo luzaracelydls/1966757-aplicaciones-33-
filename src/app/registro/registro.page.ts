@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators,ReactiveFormsModule } from '@angular/forms';
 import { NavController } from '@ionic/angular';
-import { FormControl, FormGroup } from '@angular/forms';
-import { UserService } from '../services/user.service';
 import { AuthService } from '../services/auth.service';
+
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.page.html',
@@ -10,24 +10,43 @@ import { AuthService } from '../services/auth.service';
 })
 export class RegistroPage implements OnInit {
 
+  registroForm: FormGroup;
 
-
-  constructor(private nav:NavController,private auth:AuthService){
+  constructor(
+    private formBuilder: FormBuilder,
+    private navCtrl: NavController,
+    private authService: AuthService
+  ) { 
+    this.registroForm = new FormGroup({
+      email: new FormControl(),
+      password : new FormControl()
+    })
   }
-
- 
-  navToHome(){
-    this.nav.navigateForward('/home')
-  };
-  
-  navToSeleccionNombre(){
-    this.nav.navigateForward('/seleccion-nombre')
-  }
-  
 
   ngOnInit() {
+    this.registroForm = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]]
+    });
   }
 
-  
+  register() {
+    const email = this.registroForm.value.email;
+    const password = this.registroForm.value.password;
 
+    this.authService.register(email, password)
+      .then(() => {
+        // Si se registra correctamente, navegar a la siguiente página
+        this.navCtrl.navigateForward('/seleccion-nombre');
+      })
+      .catch((error) => {
+        // Si ocurre un error al registrar, mostrarlo en la consola
+        console.error(error);
+      });
+  }
+
+
+  navToHome(){
+    this.navCtrl.navigateForward('/home')
+  }
 }
