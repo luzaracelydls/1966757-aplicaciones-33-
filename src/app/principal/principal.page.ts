@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NavController } from '@ionic/angular';
 @Component({
   selector: 'app-principal',
   templateUrl: './principal.page.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipalPage implements OnInit {
 
-  constructor() { }
+  constructor(private nav:NavController) { }
 
   ngOnInit() {
   }
 
+  navToBuscar(){
+    this.nav.navigateForward('/buscar')
+  }
 }
