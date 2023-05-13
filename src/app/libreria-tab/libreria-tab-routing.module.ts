@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { LibreriaTabPage } from './libreria-tab.page';
+import { Component } from 'ionicons/dist/types/stencil-public-runtime';
+import { PerfilPage } from '../perfil/perfil.page';
 
 const routes: Routes = [
   {

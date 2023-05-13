@@ -15,4 +15,8 @@ export class ArtistasPage implements OnInit {
   navToSeleccionNombre(){
     this.nav.navigateForward('/seleccion-nombre')
   }
+
+  navToInicioTab(){
+    this.nav.navigateForward('/tabs')
+  }
 }

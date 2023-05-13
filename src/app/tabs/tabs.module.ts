@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { TabsPageRoutingModule } from './tabs-routing.module';
 
 import { TabsPage } from './tabs.page';
+import { LibreriaTabPageRoutingModule } from '../libreria-tab/libreria-tab-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TabsPageRoutingModule
+    TabsPageRoutingModule,
+    LibreriaTabPageRoutingModule
   ],
   declarations: [TabsPage]
 })

@@ -31,9 +31,6 @@ const routes: Routes = [
   {
     path: 'artistas',
     loadChildren: () => import('./artistas/artistas.module').then( m => m.ArtistasPageModule)
-  },  {
-    path: 'principal',
-    loadChildren: () => import('./principal/principal.module').then( m => m.PrincipalPageModule)
   },
   {
     path: 'tabs',
@@ -51,6 +48,11 @@ const routes: Routes = [
     path: 'libreria-tab',
     loadChildren: () => import('./libreria-tab/libreria-tab.module').then( m => m.LibreriaTabPageModule)
   },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+
 
 
 
