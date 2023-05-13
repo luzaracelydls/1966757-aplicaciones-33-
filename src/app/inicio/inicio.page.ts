@@ -43,7 +43,7 @@ export class InicioPage implements OnInit {
     this.authService.login(email, password)
       .then(() => {
         // Si se registra correctamente, navegar a la siguiente página
-        this.nav.navigateForward('/principal');
+        this.nav.navigateForward('/tabs');
       })
       .catch((error) => {
         // Si ocurre un error al registrar, mostrarlo en la consola

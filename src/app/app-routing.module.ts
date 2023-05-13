@@ -35,6 +35,22 @@ const routes: Routes = [
     path: 'principal',
     loadChildren: () => import('./principal/principal.module').then( m => m.PrincipalPageModule)
   },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./tabs/tabs.module').then( m => m.TabsPageModule)
+  },
+  {
+    path: 'inicio-tab',
+    loadChildren: () => import('./inicio-tab/inicio-tab.module').then( m => m.InicioTabPageModule)
+  },
+  {
+    path: 'buscar-tab',
+    loadChildren: () => import('./buscar-tab/buscar-tab.module').then( m => m.BuscarTabPageModule)
+  },
+  {
+    path: 'libreria-tab',
+    loadChildren: () => import('./libreria-tab/libreria-tab.module').then( m => m.LibreriaTabPageModule)
+  },
 
 
 
