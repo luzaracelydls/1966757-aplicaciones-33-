@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { PerfilPage } from '../perfil/perfil.page';
 
 @Component({
   selector: 'app-libreria-tab',
@@ -13,6 +12,10 @@ export class LibreriaTabPage implements OnInit {
  
   
   ngOnInit() {
+  }
+  
+  navToPerfil(){
+    this.nav.navigateForward('/perfil')
   }
 
 }

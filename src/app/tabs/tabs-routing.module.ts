@@ -19,10 +19,11 @@ const routes: Routes = [
       {
         path: 'libreria-tab',
         loadChildren: () => import('./../libreria-tab/libreria-tab.module').then( m => m.LibreriaTabPageModule)
-      }
+      },
     ]
-  }
+  },
 ];
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
