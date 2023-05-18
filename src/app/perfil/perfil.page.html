@@ -5,4 +5,22 @@
   <ion-button class="flecha" (click)="navToTabs()">
     <ion-icon slot="icon-only" name="arrow-back-circle-outline"></ion-icon>
   </ion-button>
+</div>
+
+<div class="container">
+  <div class="image-container">
+  <img [src]="image" *ngFor="let image of images" width="100">
   </div>
+</div>
+
+
+<label class="custom-file-upload">
+  <input type="file" (change)="uploadImage($event)">
+  Subir imagen de perfil
+</label>
+
+
+
+<div>
+</div>
+
