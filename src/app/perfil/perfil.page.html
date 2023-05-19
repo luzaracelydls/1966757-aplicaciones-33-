@@ -1,26 +1,31 @@
 
 
 
-<div>
+<div class="button-container">
   <ion-button class="flecha" (click)="navToTabs()">
     <ion-icon slot="icon-only" name="arrow-back-circle-outline"></ion-icon>
+  </ion-button>
+
+
+  <ion-button class="salir" (click)="logout()">
+    <ion-icon slot="icon-only" name="log-out"></ion-icon>
+    Cerrar sesion
   </ion-button>
 </div>
 
 <div class="container">
-  <div class="image-container">
+  <div>
   <img [src]="image" *ngFor="let image of images" width="100">
   </div>
 </div>
 
-
+<div>
 <label class="custom-file-upload">
   <input type="file" (change)="uploadImage($event)">
-  Subir imagen de perfil
+  Cambiar imagen de perfil
 </label>
-
-
-
-<div>
 </div>
+
+
+
 

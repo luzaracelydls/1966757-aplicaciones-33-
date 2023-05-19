@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Storage, ref, uploadBytes,listAll,getDownloadURL} from '@angular/fire/storage';
 import { error } from 'console';
+import { AuthService } from '../services/auth.service';
+import { Auth,createUserWithEmailAndPassword,signInWithEmailAndPassword } from '@angular/fire/auth';
+
 
 @Component({
   selector: 'app-perfil',
@@ -14,7 +17,7 @@ export class PerfilPage implements OnInit {
   images: string[];
 
 
-  constructor(private nav:NavController,private storage:Storage) { 
+  constructor(private nav:NavController,private storage:Storage,private afAuth:Auth,private authService:AuthService) { 
     this.images = []
   }
 
@@ -54,4 +57,11 @@ export class PerfilPage implements OnInit {
     })
     .catch(error=>console.log(error));
   }
+
+ 
+  logout(){
+    this.authService.logout();
+    this.nav.navigateForward('/home')
+  }
+
 }
