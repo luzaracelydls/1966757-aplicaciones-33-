@@ -5,10 +5,14 @@ import { NavController } from '@ionic/angular';
   templateUrl: './artistas.page.html',
   styleUrls: ['./artistas.page.scss'],
 })
+
+
+
 export class ArtistasPage implements OnInit {
+  selectedImage: number = -1;
 
   constructor(private nav:NavController) { }
-
+ 
   ngOnInit() {
   }
 
@@ -19,4 +23,15 @@ export class ArtistasPage implements OnInit {
   navToInicioTab(){
     this.nav.navigateForward('/tabs')
   }
-}
+
+  highlightImage(imageNumber: number){
+    if (this.selectedImage == imageNumber){
+        this.selectedImage = -1;}
+      else{
+        this.selectedImage = imageNumber
+      }
+    }
+  }
+
+
+

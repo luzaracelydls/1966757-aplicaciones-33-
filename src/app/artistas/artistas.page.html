@@ -14,27 +14,52 @@
   </div>
 
 <div class="grid-container">
-
-  <div class="grid-item">
-    <img src="aglogo.jpeg" alt="Imagen 1" class="round-image">
+  <div class="grid-item" [ngClass]="{ 'highlighted': selectedImage === 0 }" (click)="highlightImage(0)">
+    <img src="assets/aglogo.jpeg" alt="Imagen 1" class="round-image">
     <p>Ariana Grande</p>
   </div>
 
-  <div class="grid-item">
-    <img src="bblogo.jpg" alt="Imagen 2" class="round-image">
+  <div class="grid-item" [ngClass]="{ 'highlighted': selectedImage === 1 }" (click)="highlightImage(1)">
+    <img src="assets/bblogo.jpg" alt="Imagen 2" class="round-image">
     <p>Bad Bunny</p>
   </div>
 
-  <div class="grid-item">
-    <img src="acdclogo.png" alt="Imagen 3" class="round-image">
+  <div class="grid-item" [ngClass]="{ 'highlighted': selectedImage === 2 }" (click)="highlightImage(2)">
+    <img src="assets/acdclogo.png" alt="Imagen 3" class="round-image">
     <p>AC/DC</p>
   </div>
 
-  <div class="grid-item">
-    <img src="enjambrelogo.jpg" alt="Imagen 4" class="round-image">
+  <div class="grid-item" [ngClass]="{ 'highlighted': selectedImage === 3 }" (click)="highlightImage(3)">
+    <img src="assets/enjambrelogo.jpg" alt="Imagen 4" class="round-image">
     <p>Enjambre</p>
   </div>
- 
+
+  <div class="grid-item" [ngClass]="{ 'highlighted': selectedImage === 4 }" (click)="highlightImage(4)">
+    <img src="assets/hslogo.jpg" alt="Imagen 5" class="round-image">
+    <p>Harry Styles</p>
+  </div>
+
+  <div class="grid-item" [ngClass]="{ 'highlighted': selectedImage === 5 }" (click)="highlightImage(5)">
+    <img src="assets/inspector-.jpg" alt="Imagen 6" class="round-image">
+    <p>Inspector</p>
+  </div>
+
+
+  <div class="grid-item" [ngClass]="{ 'highlighted': selectedImage === 6 }" (click)="highlightImage(6)">
+    <img src="assets/mnm.jpg" alt="Imagen 7" class="round-image">
+    <p>Eminem</p>
+  </div>
+
+
+  <div class="grid-item" [ngClass]="{ 'highlighted': selectedImage === 7 }" (click)="highlightImage(7)">
+    <img src="assets/lizo.png" alt="Imagen 8" class="round-image">
+    <p>Lizzo</p>
+  </div>
+
+  <div class="grid-item" [ngClass]="{ 'highlighted': selectedImage === 8 }" (click)="highlightImage(8)">
+    <img src="assets/olivia-rodrigo.jpg" alt="Imagen 9" class="round-image">
+    <p>Enjambre</p>
+  </div>
 </div>
 
 

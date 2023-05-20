@@ -14,7 +14,7 @@
 }
 
 .siguiente{
-    margin-top: 700px;
+    margin-top: 100px;
     justify-content: center;
     display: flex;
 }
@@ -32,11 +32,16 @@
   
   .round-image {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 105px;
+    height: 105px;
   }
   
   .grid-item p {
     margin-top: 10px;
+  }
+
+  .highlighted {
+    border: 2px solid yellow;
+    transform: translateY(-5px);
   }
   
