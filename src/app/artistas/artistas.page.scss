@@ -18,3 +18,25 @@
     justify-content: center;
     display: flex;
 }
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .grid-item {
+    text-align: center;
+  }
+  
+  .round-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .grid-item p {
+    margin-top: 10px;
+  }
+  
