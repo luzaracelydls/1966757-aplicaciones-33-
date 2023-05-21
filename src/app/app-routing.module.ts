@@ -51,7 +51,15 @@ const routes: Routes = [
   {
     path: 'perfil',
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },  {
+    path: 'reproductor',
+    loadChildren: () => import('./reproductor/reproductor.module').then( m => m.ReproductorPageModule)
   },
+  {
+    path: 'playlists',
+    loadChildren: () => import('./playlists/playlists.module').then( m => m.PlaylistsPageModule)
+  },
+
 
 
 
