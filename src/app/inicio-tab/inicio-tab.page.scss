@@ -1,0 +1,28 @@
+.scroll-container {
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    overflow-x: scroll; /* Habilita el scroll horizontal */
+    white-space: nowrap; /* Evita que los elementos se envuelvan a la siguiente línea */
+  }
+  
+  .scroll-content {
+    display: inline-block; /* Hace que el contenido se muestre en línea */
+  }
+  
+  .elemento {
+    display: inline-block; /* Muestra los elementos en línea */
+    width: 150px; /* Ancho deseado para cada elemento */
+    height: 150px; /* Altura deseada para cada elemento */
+    margin-right: 15px; /* Espacio entre elementos */
+  }
+
+  .elemento p{
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .round-image {
+    border-radius: 50%;
+    width: 105px;
+    height: 105px;
+  }
