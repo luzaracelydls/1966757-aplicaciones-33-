@@ -17,12 +17,35 @@
 
   .elemento p{
     margin-top: 10px;
-    text-align: center;
+    text-align:center;
     width: 100%;
+    font-family: Cabin;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+
   }
   
   .round-image {
     border-radius: 50%;
     width: 105px;
     height: 105px;
+  }
+
+  .texto{
+    font-family: Cabin;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+
+  }
+
+  .square-image {
+    width: 105px;
+    height: 105px;
+    
   }
