@@ -1,27 +1,31 @@
 
+<ion-header>
+  <ion-toolbar>
+    
+    <div class="button-container">
+      <ion-button class="flecha" color="warning" (click)="navToTabs()">
+        <ion-icon slot="icon-only" name="arrow-back-circle-outline"></ion-icon>
+      </ion-button>
+    
+      <ion-button class="salir" color="warning" (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+        logout
+      </ion-button>
 
+    </div>
+  </ion-toolbar>
 
-<div class="button-container">
-  <ion-button class="flecha" (click)="navToTabs()">
-    <ion-icon slot="icon-only" name="arrow-back-circle-outline"></ion-icon>
-  </ion-button>
-
-
-  <ion-button class="salir" (click)="logout()">
-    <ion-icon slot="icon-only" name="log-out"></ion-icon>
-    Cerrar sesion
-  </ion-button>
-</div>
+</ion-header>
 
 <div class="container">
-  <div>
   <img [src]="image" *ngFor="let image of images" width="100">
-  </div>
 </div>
 
-<div>
-  <ion-input type="file" (change)="uploadImage($event)"></ion-input>
+<div class="subir">
+  <input type="file" (change)="uploadImage($event)" id="fileInput">
+  <ion-button color="warning" (click)="openFileInput()">Seleccionar una foto de perfil</ion-button>
 </div>
+
 
 
 

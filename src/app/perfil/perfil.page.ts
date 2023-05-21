@@ -58,6 +58,10 @@ export class PerfilPage implements OnInit {
     .catch(error=>console.log(error));
   }
 
+  openFileInput() {
+    const fileInput = document.getElementById('fileInput') as HTMLInputElement;
+    fileInput.click();
+  }
  
   logout(){
     this.authService.logout();
