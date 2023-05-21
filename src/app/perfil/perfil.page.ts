@@ -27,7 +27,7 @@ export class PerfilPage implements OnInit {
 
 
   navToTabs(){
-    this.nav.navigateForward('/tabs')
+    this.nav.navigateForward('/tabs/libreria-tab')
   }
 
   uploadImage($event:any){

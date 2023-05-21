@@ -4,12 +4,7 @@
     margin-bottom: 10px;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Ajusta la altura del contenedor según tus necesidades */
-}
+
 
 .container {
   display: flex;
@@ -32,20 +27,11 @@ img {
   }
 
 
-  .custom-file-upload {
-    display: inline-block;
-    padding:  20px;
-    background-color: gold;
-    border: 1px solid #000000;
-    cursor: pointer;
-    border-radius: 35%;
-    color:#000000
-  }
+
   
-  .custom-file-upload input[type="file"] {
-    display: none;
-  }
+ 
   
+
 
   .button-container {
     display: flex;
