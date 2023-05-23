@@ -79,6 +79,18 @@ const routes: Routes = [
     path: 'playlist-fiesta',
     loadChildren: () => import('./playlist-fiesta/playlist-fiesta.module').then( m => m.PlaylistFiestaPageModule)
   },
+  {
+    path: 'pop',
+    loadChildren: () => import('./pop/pop.module').then( m => m.PopPageModule)
+  },
+  {
+    path: 'indie',
+    loadChildren: () => import('./indie/indie.module').then( m => m.IndiePageModule)
+  },
+  {
+    path: 'rock',
+    loadChildren: () => import('./rock/rock.module').then( m => m.RockPageModule)
+  },
 
 
 
