@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'ionic PIA1966757',
+  appId: 'com.efecode.spofity',
+  appName: 'spofity',
   webDir: 'www',
   server: {
     androidScheme: 'https'
