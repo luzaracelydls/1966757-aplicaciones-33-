@@ -17,10 +17,17 @@
 
 .subir{
   position: relative;
-  margin-bottom: 700px;
+  margin-bottom: 530px;
   text-align: center;
+  margin-top: -50px;
 }
 
+
+
+.subir ion-button,
+.tomar ion-button {
+  margin-top: 10px; /* Ajusta el valor del margen superior del botón según tus necesidades */
+}
 
 
 img {

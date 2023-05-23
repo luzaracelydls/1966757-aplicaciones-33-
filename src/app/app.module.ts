@@ -19,6 +19,11 @@ import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { Auth } from '@angular/fire/auth';
 
+import { Camera, CameraOptions} from '@ionic-native/camera/ngx';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
+
+
 
 
 

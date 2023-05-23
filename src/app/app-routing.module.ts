@@ -59,6 +59,26 @@ const routes: Routes = [
     path: 'playlists',
     loadChildren: () => import('./playlists/playlists.module').then( m => m.PlaylistsPageModule)
   },
+  {
+    path: 'likes',
+    loadChildren: () => import('./likes/likes.module').then( m => m.LikesPageModule)
+  },
+  {
+    path: 'playlist-est',
+    loadChildren: () => import('./playlist-est/playlist-est.module').then( m => m.PlaylistEstPageModule)
+  },
+  {
+    path: 'playlist-ej',
+    loadChildren: () => import('./playlist-ej/playlist-ej.module').then( m => m.PlaylistEjPageModule)
+  },
+  {
+    path: 'playlist-dor',
+    loadChildren: () => import('./playlist-dor/playlist-dor.module').then( m => m.PlaylistDorPageModule)
+  },
+  {
+    path: 'playlist-fiesta',
+    loadChildren: () => import('./playlist-fiesta/playlist-fiesta.module').then( m => m.PlaylistFiestaPageModule)
+  },
 
 
 

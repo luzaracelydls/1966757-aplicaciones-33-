@@ -68,4 +68,8 @@ export class PerfilPage implements OnInit {
     this.nav.navigateForward('/home')
   }
 
+  hacerFoto(){
+    
+  }
+
 }

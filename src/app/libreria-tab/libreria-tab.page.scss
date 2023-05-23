@@ -2,3 +2,27 @@
     color:yellow;
     --background:var(--background) rgba(0, 0, 0, 0.853);
 }
+
+.abajito {
+    margin-top: 30px;
+    display: flex; /* Aplica un diseño flexible */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+  }
+  
+  .abajito img {
+    margin-right: 10px; /* Agrega un margen derecho para separar la imagen del texto */
+    margin-left: 10px;
+    width: 50px;
+    height: auto;
+  }
+
+  .abajito p{
+    font-family: Cabin;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+
+  }

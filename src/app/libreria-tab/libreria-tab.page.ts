@@ -18,4 +18,8 @@ export class LibreriaTabPage implements OnInit {
     this.nav.navigateForward('/perfil')
   }
 
+
+  navToLikes(){
+    this.nav.navigateForward('/likes')
+  }
 }

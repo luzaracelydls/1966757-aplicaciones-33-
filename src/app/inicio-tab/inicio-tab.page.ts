@@ -18,7 +18,21 @@ export class InicioTabPage implements OnInit {
     this.nav.navigateForward("/reproductor")
   }
 
-  navToPlaylists(){
-    this.nav.navigateBack("/playlists")
+  navToPlaylistEj(){
+    this.nav.navigateForward("/playlist-ej")
   }
+
+  navToPlaylistDor(){
+    this.nav.navigateForward("/playlist-dor")
+  }
+
+  navToPlaylistEst(){
+    this.nav.navigateForward("/playlist-est")
+  }
+
+  navToPlaylistFiesta(){
+    this.nav.navigateForward("/playlist-fiesta")
+  }
+
+
 }
