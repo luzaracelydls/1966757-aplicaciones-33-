@@ -21,7 +21,7 @@ export class ArtistasPage implements OnInit {
   }
 
   navToInicioTab(){
-    this.nav.navigateForward('/tabs/inicio-tab')
+    this.nav.navigateForward('/tabs/buscar-tab')
   }
 
   highlightImage(imageNumber: number){

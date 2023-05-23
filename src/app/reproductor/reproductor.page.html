@@ -10,36 +10,18 @@
 
   <div class="elemento">
     <audio controls>
-      <source src="https://firebasestorage.googleapis.com/v0/b/ionic-pia-1966757.appspot.com/o/musica%2FJigsaw%20Falling%20Into%20Place.mp3?alt=media&token=2fb353c2-a7a7-4893-a203-5a03c9f2" type="audio/mp3">
+      <source src="https://firebasestorage.googleapis.com/v0/b/ionic-pia-1966757.appspot.com/o/musica%2Fradiohead%2FJigsaw%20Falling%20Into%20Place.mp3?alt=media&token=af139d73-0440-4362-adfa-db6ce3506135" type="audio/mp3">
           Tu navegador no soporta audio HTML5.
     </audio>
   </div>
-
-  <div class="elemento">
-    <audio controls>
-      <source src="https://firebasestorage.googleapis.com/v0/b/ionic-pia-1966757.appspot.com/o/musica%2FYou%20(320%20kbps).mp3?alt=media&token=0bf6ee1a-9813-4941-bbcd-f33b4ddb5125" type="audio/mp3">
-          Tu navegador no soporta audio HTML5.
-    </audio>
-  </div>
-
-  <div class="elemento">
-    <audio controls>
-      <source src="https://firebasestorage.googleapis.com/v0/b/ionic-pia-1966757.appspot.com/o/musica%2FKarma%20Police%20(256%20kbps).mp3?alt=media&token=9741a047-e3cb-462a-b2ac-e2e254d211b7" type="audio/mp3">
-          Tu navegador no soporta audio HTML5.
-    </audio>
-  </div>
-
-
 </div>
 
 <ion-content>
   <ion-button color ="warning" (click)="discoverDevices()">Buscar dispositivos Bluetooth</ion-button>
-
-  
     <ion-item   *ngFor="let device of devices" (click)="connectToDevice(device)">
       {{ device.name }}
     </ion-item>
-
+    
 </ion-content>
 
   
