@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators,ReactiveFormsModule } from '@angular/forms';
 import { NavController } from '@ionic/angular';
 import { AuthService } from '../services/auth.service';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-registro',
@@ -15,7 +16,8 @@ export class RegistroPage implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private nav: NavController,
-    private authService: AuthService
+    private authService: AuthService,
+    private toastController: ToastController
   ) { 
     this.registroForm = new FormGroup({
       email: new FormControl(),
@@ -42,7 +44,17 @@ export class RegistroPage implements OnInit {
       .catch((error) => {
         // Si ocurre un error al registrar, mostrarlo en la consola
         console.error(error);
+        this.presentToast('Usuario o contraseña invalido');
       });
+  }
+
+  async presentToast(message: string) {
+    const toast = await this.toastController.create({
+      message: message,
+      duration: 4000, // Duración en milisegundos
+      position: 'middle' // Posición del Toast en la pantalla
+    });
+    toast.present();
   }
 
 
